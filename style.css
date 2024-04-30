@@ -10,6 +10,10 @@ body {
     color: #eee;
     margin-left: 50px;
     transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+#toggle-toolbar i{
+    margin-right: 7px;
 }
 .down-arrow i {
     transform: rotate(90deg);
@@ -106,10 +110,6 @@ header .menu{
     font-size: 18px;
     margin: 15px;
 }
-
-.thumbnails::-webkit-scrollbar{
-    width: 0;
-}
 .thumbnail {
     width: 150px;
     height: 220px;
@@ -118,6 +118,8 @@ header .menu{
     flex-shrink: 0;
     border: 1px solid #ccc;
     cursor: pointer;
+    border-radius: 10px;
+
 }
 
 .thumbnail img {
@@ -208,12 +210,6 @@ header .menu{
     filter: blur(20px);
     opacity: 0;
     animation: showContent .3s .3s ease-in-out 1 forwards;
-}
-#slideshow .item.active h2{
-    animation-delay: 1s;
-}
-#slideshow .item.active p:nth-child(3){
-    animation-duration: 1.3s;
 }
 .hidden {
     display: none;
