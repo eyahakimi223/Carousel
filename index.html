@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sliders</div>
+        <ul class="menu">
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Info</li>
+        </ul>
+        <div class="search">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+    </header>
+    <a href="#" id="toggle-toolbar"><i class="fa-solid fa-arrow-right"></i>&nbsp;Barre d'outils</a>
+
+    <div class="buttons">
+    <button id="previous-page"><</button>
+<button id="next-page">></button>
+</div>
+    <section id="slideshow">
+        <figure class="item active">
+            <img src="image1.jpg" alt="Image 1" data-image="image1" >
+            <div class="content">
+                <p>Slider 01</p>
+                <h2>Zitouna</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image8.jpg" alt="Image 2" data-image="image2" >
+            <div class="content">
+                <p>Slider 02</p>
+                <h2>Médina</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image3.jpg" alt="Image 3" data-image="image3">
+            <div class="content">
+                <p>Slider 03</p>
+                <h2>Beb bhar</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image4.jpg" alt="Image 4" data-image="image4">
+            <div class="content">
+                <p>Slider 04</p>
+                <h2>La Marsa</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image5.jpg" alt="Image 5" data-image="image5">
+            <div class="content">
+                <p>Slider 05</p>
+                <h2>Hammamet</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image11.jpg" alt="Image 6" data-image="image6">
+            <div class="content">
+                <p>Slider 06</p>
+                <h2>Djerba</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image7.jpg" alt="Image 7" data-image="image7">
+            <div class="content">
+                <p>Slider 07</p>
+                <h2>Carthage</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image12.jpg" alt="Image 8" data-image="image8">
+            <div class="content">
+                <p>Slider 08</p>
+                <h2>El Jem</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image9.jpg" alt="Image 9" data-image="image9">
+            <div class="content">
+                <p>Slider 09</p>
+                <h2>Kairouan</h2>
+            </div>
+        </figure>
+        <figure class="item">
+            <img src="image10.jpg" alt="Image 10" data-image="image10">
+            <div class="content">
+                <p>Slider 10</p>
+                <h2>Douz</h2>
+            </div>
+        </figure>
+    </section>
+    <section id="thumbnails">
+        <div class="thumbnail " data-image="image1">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="content">
+                Zitouna
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image2">
+            <img src="image8.jpg" alt="Image 2">
+            <div class="content">
+               Médina
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image3">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="content">
+                Beb Bhar
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image4">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="content">
+                La Marsa
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image5">
+            <img src="image5.jpg" alt="Image 5">
+            <div class="content">
+                Hammamet
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image6">
+            <img src="image11.jpg" alt="Image 6">
+            <div class="content">
+                Djerba
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image7">
+            <img src="image7.jpg" alt="Image 7">
+            <div class="content">
+                Carthage
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image8">
+            <img src="image12.jpg" alt="Image 8">
+            <div class="content">
+                El Jem
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image9">
+            <img src="image9.jpg" alt="Image 9">
+            <div class="content">
+                Kairouan
+            </div>
+        </div>
+        <div class="thumbnail" data-image="image10">
+            <img src="image10.jpg" alt="Image 10">
+            <div class="content">
+                Douz
+            </div>
+        </div>
+    </section>
+
+    <div id="toolbar">
+        <button id="prev"><i class="fas fa-backward"></i></button>
+        <button id="play"><i class="fas fa-play"></i></button>
+        <button id="next"><i class="fas fa-forward"></i></button>
+        <button id="random"><i class="fas fa-random"></i></button>
+    </div>
+    <script src="https://kit.fontawesome.com/5be3ff13f1.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
