@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-color: #010101;
     color: #eee;
+    
 }
 #toggle-toolbar{
     z-index: 100;
@@ -38,19 +39,12 @@ header{
     align-items: center;
     position: relative;
     z-index: 100;
+    padding: 15px;
 }
 header .logo{
     font-weight: bold;
 }
-header .menu{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 500;
-}
+
 .buttons{
     display: flex;
     position: absolute;
@@ -88,6 +82,9 @@ header .menu{
     box-sizing: border-box;
     overflow: auto;
     justify-content: center;
+}
+.thumbnail :hover{
+    filter: blur(3px);
 }
 #toolbar {
     display: none;
@@ -213,4 +210,123 @@ header .menu{
 }
 .hidden {
     display: none;
+}
+.title{
+    width: 900px;
+    margin: 16px;
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+
+  &::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: #8c693cc1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+}
+ul {
+    display: flex;
+    flex-direction:row;
+    align-items: start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+  
+    li {
+      padding: 6px 0;
+  
+      a {
+        --fill-color: #ffffff;
+        position: relative;
+        display: block;
+        padding: 4px 0;
+        font: 400  2rem Raleway, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px var(--fill-color);
+        background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+        color: transparent;
+        background-clip: text;
+        transition: 0.5s linear;
+  
+        &:hover {
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+
+  .searchBox {
+    position: absolute;
+    left: 50%;
+    transform:  translate(400px,0px);
+    height: 40px;
+    border-radius: 40px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    float: right;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border: 1px white;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
 }
