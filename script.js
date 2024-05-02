@@ -79,7 +79,7 @@
     });
     function startPlay() {
         if (intervalId === null) {
-            intervalId = setInterval(nextSlide, 3000); // Change 3000 to desired interval in milliseconds
+            intervalId = setInterval(nextSlide, 3000); 
         }
     }
     function stopPlay() {
