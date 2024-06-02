@@ -1,220 +1,219 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background-color: #010101;
-    color: #eee;
-    
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: #010101;
+  color: #eee;
 }
-#toggle-toolbar{
-    z-index: 100;
-    position: relative;
-    color: #eee;
-    margin-left: 50px;
-    transition: transform 0.3s ease-in-out;
-    text-decoration: none;
+#toggle-toolbar {
+  z-index: 100;
+  position: relative;
+  color: #eee;
+  font-size: 20px;
+  margin-left: 50px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
 }
-#toggle-toolbar i{
-    margin-right: 7px;
+#toggle-toolbar i {
+  margin-right: 7px;
 }
 .down-arrow i {
-    transform: rotate(90deg);
-    transition: transform 0.3s ease-in-out; 
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
 }
-
 .right-arrow i {
-    transform: rotate(0deg);
-    transition: transform 0.3s ease-in-out; 
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
 }
-svg{
-    width: 25px;
+svg {
+  width: 25px;
 }
-header{
-    width: 1200px;
-    max-width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    padding: 15px;
+header {
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  padding: 15px;
 }
-header .logo{
-    font-weight: bold;
-    font-size: 30px;
+header .logo {
+  font-weight: bold;
+  font-size: 30px;
 }
 
-.buttons{
-    display: flex;
-    position: absolute;
-    top: 30%;
-    right: 50px;
-    z-index: 100;
+.buttons {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  z-index: 100;
 }
-.buttons button{
-    background-color: #eee5;
-    border: none;
-    font-family: monospace;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
-    color: #eee;
-    transition: .5s;
-    margin: 0 10px;
-    cursor: pointer;
-
+.buttons button {
+  background-color: #eee5;
+  border: none;
+  font-family: monospace;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: x-large;
+  color: #eee;
+  transition: 0.5s;
+  margin: 0 10px;
+  cursor: pointer;
 }
-.buttons button:hover{
-    background-color: #eee;
-    color: black;
+.buttons button:hover {
+  background-color: #eee;
+  color: black;
 }
 #thumbnails {
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    height: 250px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
-    justify-content: center;
+  position: absolute;
+  bottom: -20px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
 }
-.thumbnail :hover{
-    filter: blur(3px);
+.thumbnail :hover {
+  filter: blur(3px);
 }
 #toolbar {
-    display: none;
-    position: fixed;
-    bottom: 100px;
-    z-index: 150;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center; 
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  z-index: 150;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 #toolbar button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 15px;
 }
 .thumbnail {
-    width: 150px;
-    height: 220px;
-    filter: brightness(.5);
-    transition: .5s;
-    flex-shrink: 0;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 10px;
-
+  width: 150px;
+  height: 220px;
+  filter: brightness(0.5);
+  transition: 0.5s;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .thumbnail.active {
-    filter: brightness(1);
-
+  filter: brightness(1);
 }
-.thumbnail .content{
-    position: absolute;
-    inset: auto 10px 10px 10px;
+.thumbnail .content {
+  position: absolute;
+  inset: auto 10px 10px 10px;
 }
 #slideshow {
-    position: relative;
-    height: 100vh;
-    margin-top: -50px;
+  position: relative;
+  height: 60vh;
+  margin-top: -50px;
+
+
 }
-#slideshow .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    overflow: hidden;
-    transition: .5s;
+#slideshow .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-left: 380px;
+margin-top: 100px;
+  
 }
 #slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
+transform: rotate(-5deg);
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  
 }
-#slideshow .item::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to top, #00000059 5%, transparent
-    );
-
+#slideshow .item::after {
+  content: "";
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* background-image: linear-gradient(to top, #00000059 5%, transparent); */
 }
 #slideshow img.active {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-#slideshow .item .content{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width: 500px;
-    max-width: 80%;
-    z-index: 1;
-    animation: showContent .5s ease-in-out 1 forwards;
+#slideshow .item .content {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+  animation: showContent 0.5s ease-in-out 1 forwards;
 }
-#slideshow .item .content p:nth-child(1){
-    text-transform: uppercase;
-    letter-spacing: 10px;
+#slideshow .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 10px;
 }
-#slideshow .item .content h2{
-    font-size: 100px;
-    margin: 0;
+#slideshow .item .content h2 {
+  font-size: 100px;
+  margin: 0;
 }
 
 @keyframes showContent {
-    from {
-        transform: translateY(30px);
-        filter: blur(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-#slideshow .item.active p:nth-child(1),
-#slideshow .item.active h2,
-#slideshow .item.active p:nth-child(3){
+  from {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .3s .3s ease-in-out 1 forwards;
+  }
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+#slideshow .item.active p:nth-child(1),
+#slideshow .item.active h2 {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.3s 0.3s ease-in-out 1 forwards;
 }
 .hidden {
-    display: none;
+  display: none;
 }
-.title{
-    width: 900px;
-    margin: 16px;
+.title {
+  width: 900px;
+  margin: 16px;
   font-size: 96px;
   color: #ccc;
   text-transform: uppercase;
@@ -240,94 +239,90 @@ header .logo{
       width: 100%;
     }
   }
-
 }
 ul {
-    display: flex;
-    flex-direction:row;
-    align-items: start;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    justify-content: center;
-    gap: 20px;
-  
-    li {
-      padding: 6px 0;
-  
-      a {
-        --fill-color: #ffffff;
-        position: relative;
-        display: block;
-        padding: 4px 0;
-        font: 400  2rem Raleway, sans-serif;
-        text-decoration: none;
-        text-transform: uppercase;
-        -webkit-text-stroke: 1px var(--fill-color);
-        background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
-        color: transparent;
-        background-clip: text;
-        transition: 0.5s linear;
-  
-        &:hover {
-          background-size: 100%;
-        }
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+
+  li {
+    padding: 6px 0;
+
+    a {
+      --fill-color: #ffffff;
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      font: 400 2rem Raleway, sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px var(--fill-color);
+      background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+      color: transparent;
+      background-clip: text;
+      transition: 0.5s linear;
+
+      &:hover {
+        background-size: 100%;
       }
     }
   }
+}
 
-
-  .searchBox {
-    position: absolute;
-    left: 50%;
-    transform:  translate(400px,0px);
-    height: 40px;
-    border-radius: 40px;
-
+.searchBox {
+  position: absolute;
+  left: 50%;
+  transform: translate(400px, 0px);
+  height: 40px;
+  border-radius: 40px;
 }
 
 .searchBox:hover > .searchInput {
-    width: 240px;
-    padding: 0 6px;
+  width: 240px;
+  padding: 0 6px;
 }
 
 .searchBox:hover > .searchButton {
   background: white;
-  color : #2f3640;
+  color: #2f3640;
 }
 
 .searchButton {
-    float: right;
-    border: none;
-    background-color: black;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
+  float: right;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
 }
 
 .searchInput {
-    border: 1px white;
-    background: none;
-    outline:none;
-    float:left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-
+  border: 1px white;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
 }
 
 @media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
+  .searchBox:hover > .searchInput {
     width: 150px;
     padding: 0 6px;
-}
+  }
 }
